@@ -1225,8 +1225,7 @@ ul { list-style: none; }
   .hero { padding: 48px 0 0; }
   .hero-inner { padding: 0 20px 60px; }
   .hero-stats { flex-wrap: wrap; gap: 24px; }
-  .stat { padding: 0 20px; }
-  .stat:first-child { padding-left: 0; }
+  .stat { padding: 0; }
   .stat-divider { display: none; }
   .section-inner, .all-work-inner, .resume-inner { padding: 0 20px; }
   .connect-inner { padding: 0 20px 60px; }
