@@ -240,23 +240,14 @@ ul { list-style: none; }
     linear-gradient(90deg, rgba(0,0,0,0.028) 1px, transparent 1px);
   background-size: 80px 80px;
   overflow: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .hero-inner {
   max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
-  padding: 140px 32px 72px;
+  padding: 180px 32px 72px;
   display: flex;
   flex-direction: column;
-  flex: 1;
-}
-
-.hero-contact-bar {
-  margin-top: auto;
 }
 
 /* Left column */
