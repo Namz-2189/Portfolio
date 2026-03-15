@@ -234,14 +234,18 @@ ul { list-style: none; }
    HERO SECTION
    ============================================ */
 .hero {
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(0,0,0,0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.055) 1px, transparent 1px);
+  background-size: 80px 80px;
   overflow: hidden;
 }
 
 .hero-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 32px 72px;
+  padding: 92px 32px 72px;
   display: flex;
   flex-direction: column;
 }
@@ -257,7 +261,7 @@ ul { list-style: none; }
   align-items: center;
   font-size: 16px;
   font-weight: 500;
-  color: #888;
+  color: #666;
   margin-bottom: 20px;
   gap: 10px;
 }
@@ -286,7 +290,7 @@ ul { list-style: none; }
 .hero-sub {
   font-size: 16px;
   line-height: 1.7;
-  color: #888;
+  color: #666;
   max-width: 100%;
   margin-bottom: 36px;
 }
@@ -475,7 +479,7 @@ ul { list-style: none; }
   gap: 7px;
   font-size: 13px;
   font-weight: 500;
-  color: #888;
+  color: #666;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -486,7 +490,7 @@ ul { list-style: none; }
   gap: 7px;
   font-size: 13px;
   font-weight: 500;
-  color: #888;
+  color: #666;
 }
 
 /* ============================================
