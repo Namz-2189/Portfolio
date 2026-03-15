@@ -100,15 +100,15 @@ ul { list-style: none; }
   align-items: center;
   gap: 6px;
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   padding: 14px 28px;
   border-radius: 100px;
-  border: 1.5px solid rgba(17,17,16,0.2);
-  color: var(--text);
-  transition: border-color var(--transition);
+  background: var(--text);
+  color: var(--bg);
+  transition: opacity var(--transition), transform var(--transition);
 }
-.btn-ghost:hover { border-color: var(--text); }
+.btn-ghost:hover { opacity: 0.85; transform: translateY(-1px); }
 
 .btn-primary-light {
   display: inline-flex;
@@ -236,8 +236,8 @@ ul { list-style: none; }
 .hero {
   background-color: var(--bg);
   background-image:
-    linear-gradient(rgba(0,0,0,0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.055) 1px, transparent 1px);
+    linear-gradient(rgba(0,0,0,0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.028) 1px, transparent 1px);
   background-size: 80px 80px;
   overflow: hidden;
 }
@@ -245,7 +245,7 @@ ul { list-style: none; }
 .hero-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 92px 32px 72px;
+  padding: 140px 32px 72px;
   display: flex;
   flex-direction: column;
 }
