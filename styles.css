@@ -245,7 +245,7 @@ ul { list-style: none; }
 .hero-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 180px 32px 72px;
+  padding: 180px 32px 88px;
   display: flex;
   flex-direction: column;
 }
