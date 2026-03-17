@@ -265,13 +265,40 @@ ul { list-style: none; }
   display: block;
 }
 
-.hero-contact-info {
+.hero-contact-bar {
+  border-top: 1px solid rgba(17,17,16,0.1);
+  background: var(--bg);
+}
+.hero-contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 32px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-contact-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: 13px;
-  color: #555;
+  font-weight: 500;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.contact-link:hover { color: var(--text); }
+.contact-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #666;
 }
 
 .hero-tag {
