@@ -262,9 +262,16 @@ ul { list-style: none; }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px 80px;
-  display: grid;
-  grid-template-rows: auto auto auto;
-  gap: 0;
+  display: block;
+}
+
+.hero-contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #555;
 }
 
 .hero-tag {
