@@ -1,4 +1,19 @@
 // ============================================================
+// CASE STUDY PAGES: smart back button
+// ============================================================
+const backLink = document.getElementById('back-link');
+if (backLink) {
+  backLink.addEventListener('click', function(e) {
+    const ref = document.referrer;
+    if (ref && new URL(ref).origin === location.origin) {
+      e.preventDefault();
+      history.back();
+    }
+    // else follow the default href (work.html)
+  });
+}
+
+// ============================================================
 // NAV: highlight active link, shrink on scroll
 // ============================================================
 const nav = document.querySelector('.nav');
@@ -6,6 +21,16 @@ window.addEventListener('scroll', () => {
   nav.style.borderBottomColor = window.scrollY > 10
     ? 'rgba(17,17,16,0.12)'
     : 'rgba(17,17,16,0.08)';
+});
+
+// ============================================================
+// WORK PAGE: clickable project rows (data-href)
+// ============================================================
+document.querySelectorAll('.project-item[data-href]').forEach(item => {
+  item.style.cursor = 'pointer';
+  item.addEventListener('click', () => {
+    window.location.href = item.dataset.href;
+  });
 });
 
 // ============================================================
