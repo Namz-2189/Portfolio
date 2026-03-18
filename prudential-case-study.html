@@ -171,10 +171,10 @@
     }
 
     /* ── Section Containers ─────────────────────────── */
-    .cs-section { padding: 96px 0; }
-    .cs-section-alt { background: #F8F9FB; }
-    .cs-section-dark { background: var(--way-blue); }
-    .cs-section-blue-lt { background: var(--way-light); }
+    .cs-section { padding: 96px 0; background: var(--bg); }
+    .cs-section-alt { background: var(--bg-dark); }
+    .cs-section-dark { background: var(--bg-dark); }
+    .cs-section-blue-lt { background: var(--bg); }
     .cs-inner {
       max-width: 1200px;
       margin: 0 auto;
@@ -185,18 +185,19 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--text-muted);
+      color: var(--purple);
       margin-bottom: 12px;
     }
-    .cs-section-eyebrow.light { color: rgba(255,255,255,0.5); }
+    .cs-section-eyebrow.light { color: rgba(238,238,232,0.35); }
     .cs-section-title {
-      font-size: clamp(28px, 4vw, 44px);
+      font-size: clamp(28px, 4vw, 48px);
       font-weight: 900;
       letter-spacing: -0.03em;
-      line-height: 1.1;
+      line-height: 1.05;
       margin-bottom: 16px;
+      color: var(--text);
     }
-    .cs-section-title.light { color: #fff; }
+    .cs-section-title.light { color: var(--text-light); }
     .cs-section-lead {
       font-size: 16px;
       line-height: 1.7;
@@ -204,7 +205,7 @@
       max-width: 640px;
       margin-bottom: 56px;
     }
-    .cs-section-lead.light { color: rgba(255,255,255,0.65); }
+    .cs-section-lead.light { color: rgba(238,238,232,0.5); }
 
     /* ── Old App Grid ────────────────────────────────── */
     .cs-old-app-grid {
@@ -214,34 +215,35 @@
       margin-top: 48px;
     }
     .cs-old-screen {
-      border-radius: 16px;
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 1px solid rgba(17,17,16,0.1);
-      background: #fff;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid rgba(17,17,16,0.08);
+      background: rgba(17,17,16,0.03);
     }
     .cs-old-screen-head {
       height: 44px;
-      background: var(--way-blue);
+      background: rgba(17,17,16,0.06);
+      border-bottom: 1px solid rgba(17,17,16,0.06);
       display: flex;
       align-items: center;
       padding: 0 12px;
       gap: 6px;
     }
-    .cs-old-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3); }
+    .cs-old-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(17,17,16,0.15); }
     .cs-old-screen-body { padding: 12px; display: flex; flex-direction: column; gap: 7px; }
-    .cs-old-line { height: 7px; background: #E5E7EB; border-radius: 4px; }
+    .cs-old-line { height: 7px; background: rgba(17,17,16,0.08); border-radius: 4px; }
     .cs-old-line.w90 { width: 90%; }
     .cs-old-line.w70 { width: 70%; }
     .cs-old-line.w50 { width: 50%; }
-    .cs-old-block { height: 50px; background: #F3F4F6; border-radius: 8px; margin: 4px 0; }
+    .cs-old-block { height: 50px; background: rgba(17,17,16,0.05); border-radius: 8px; margin: 4px 0; border: 1px solid rgba(17,17,16,0.06); }
     .cs-old-label {
       text-align: center;
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--text-muted);
       margin-top: 10px;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     /* ── Problem List ───────────────────────────────── */
@@ -251,30 +253,32 @@
       gap: 40px 80px;
       align-items: start;
     }
-    .cs-problem-list { display: flex; flex-direction: column; gap: 20px; }
+    .cs-problem-list { display: flex; flex-direction: column; gap: 16px; }
     .cs-problem-item {
       display: flex;
       gap: 16px;
       align-items: flex-start;
-      padding: 20px;
-      background: #fff;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.04);
       border-radius: var(--radius-md);
-      border: 1px solid rgba(17,17,16,0.06);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      border: 1px solid rgba(238,238,232,0.08);
+      transition: border-color 0.2s;
     }
+    .cs-problem-item:hover { border-color: rgba(91,75,255,0.35); }
     .cs-problem-icon {
       width: 36px;
       height: 36px;
-      border-radius: 50%;
+      border-radius: var(--radius-sm);
       flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 16px;
+      background: rgba(91,75,255,0.15);
     }
-    .cs-problem-icon.negative { background: #FEE2E2; }
-    .cs-problem-icon.positive { background: #DCFCE7; }
-    .cs-problem-text { font-size: 14px; line-height: 1.65; color: var(--text-muted); }
+    .cs-problem-icon.negative { background: rgba(255,100,100,0.12); }
+    .cs-problem-icon.positive { background: rgba(200,242,80,0.15); }
+    .cs-problem-text { font-size: 14px; line-height: 1.65; color: rgba(238,238,232,0.5); }
 
     /* Phone visual on right */
     .cs-problem-visual {
@@ -285,15 +289,16 @@
     .cs-big-phone {
       width: 180px;
       height: 320px;
-      background: #fff;
+      background: rgba(255,255,255,0.04);
       border-radius: 28px;
-      border: 2px solid rgba(17,17,16,0.1);
+      border: 1.5px solid rgba(255,255,255,0.1);
       overflow: hidden;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.12);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.4);
     }
     .cs-big-phone-head {
       height: 48px;
-      background: var(--way-blue);
+      background: var(--purple);
+      opacity: 0.7;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -306,22 +311,23 @@
     .cs-big-phone-body { padding: 14px 12px; display: flex; flex-direction: column; gap: 8px; }
     .cs-big-phone-banner {
       height: 64px;
-      background: linear-gradient(135deg, var(--way-blue), var(--way-blue-dk));
+      background: rgba(91,75,255,0.2);
       border-radius: 10px;
       margin-bottom: 4px;
     }
-    .cs-big-phone-line { height: 8px; background: #E5E7EB; border-radius: 4px; }
+    .cs-big-phone-line { height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; }
     .cs-big-phone-line.w80 { width: 80%; }
     .cs-big-phone-line.w60 { width: 60%; }
     .cs-big-phone-card {
       height: 44px;
-      background: var(--way-light);
+      background: rgba(91,75,255,0.12);
       border-radius: 8px;
-      border: 1px solid #BFDBFE;
+      border: 1px solid rgba(91,75,255,0.2);
     }
     .cs-big-phone-btn {
       height: 24px;
-      background: var(--way-orange);
+      background: var(--green);
+      opacity: 0.7;
       border-radius: 12px;
       margin-top: 8px;
     }
@@ -330,57 +336,62 @@
     .cs-competitor-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 12px;
     }
     .cs-competitor-card {
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-lg);
       padding: 24px 28px;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 80px;
+      border: 1px solid rgba(238,238,232,0.07);
+      transition: border-color 0.2s;
     }
+    .cs-competitor-card:hover { border-color: rgba(91,75,255,0.4); }
     .cs-competitor-name {
       font-size: 22px;
       font-weight: 900;
       letter-spacing: -0.02em;
     }
-    .comp-lemonade { background: #FF1744; }
-    .comp-lemonade .cs-competitor-name { color: #fff; }
-    .comp-chub { background: #FFF176; }
-    .comp-chub .cs-competitor-name { color: #111; }
-    .comp-sunlife { background: #DBEAFE; }
-    .comp-sunlife .cs-competitor-name { color: var(--way-blue); }
-    .comp-allianz { background: #EFF6FF; border: 1px solid #BFDBFE; }
-    .comp-allianz .cs-competitor-name { color: #003781; }
-    .comp-digit { background: #1E3A8A; }
+    .comp-lemonade { background: rgba(255,50,80,0.15); }
+    .comp-lemonade .cs-competitor-name { color: #FF6B80; }
+    .comp-chub { background: rgba(200,242,80,0.1); }
+    .comp-chub .cs-competitor-name { color: var(--green); }
+    .comp-sunlife { background: rgba(91,75,255,0.12); }
+    .comp-sunlife .cs-competitor-name { color: var(--purple-light); }
+    .comp-allianz { background: rgba(255,255,255,0.04); }
+    .comp-allianz .cs-competitor-name { color: rgba(238,238,232,0.6); }
+    .comp-digit { background: rgba(91,75,255,0.2); }
     .comp-digit .cs-competitor-name { color: #fff; }
-    .comp-geico { background: #DCFCE7; }
-    .comp-geico .cs-competitor-name { color: #15803D; }
+    .comp-geico { background: rgba(200,242,80,0.15); }
+    .comp-geico .cs-competitor-name { color: var(--green); }
 
     .cs-competitor-insights {
       margin-top: 48px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
     }
     .cs-insight {
       display: flex;
-      gap: 14px;
+      gap: 16px;
       align-items: flex-start;
       font-size: 14px;
       line-height: 1.65;
-      color: rgba(255,255,255,0.7);
-      padding: 16px;
-      background: rgba(255,255,255,0.06);
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(238,238,232,0.45);
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.03);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(238,238,232,0.07);
+      transition: border-color 0.2s;
     }
+    .cs-insight:hover { border-color: rgba(91,75,255,0.3); }
     .cs-insight-dot {
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: var(--way-orange);
+      background: var(--purple);
       flex-shrink: 0;
       margin-top: 6px;
     }
@@ -392,18 +403,21 @@
       gap: 16px;
     }
     .cs-solution-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(17,17,16,0.03);
+      border: 1px solid rgba(17,17,16,0.08);
       border-radius: var(--radius-lg);
       padding: 28px 24px;
-      transition: background 0.2s ease;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .cs-solution-card:hover { background: rgba(255,255,255,0.12); }
+    .cs-solution-card:hover {
+      border-color: rgba(91,75,255,0.3);
+      box-shadow: 0 4px 24px rgba(91,75,255,0.06);
+    }
     .cs-solution-icon {
       width: 44px;
       height: 44px;
       border-radius: var(--radius-sm);
-      background: rgba(255,255,255,0.1);
+      background: rgba(91,75,255,0.1);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -413,34 +427,38 @@
     .cs-solution-name {
       font-size: 15px;
       font-weight: 800;
-      color: #fff;
+      color: var(--text);
       margin-bottom: 8px;
       letter-spacing: -0.01em;
     }
     .cs-solution-desc {
       font-size: 13px;
       line-height: 1.65;
-      color: rgba(255,255,255,0.55);
+      color: var(--text-muted);
     }
 
     /* ── Features Section ───────────────────────────── */
     .cs-features-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 20px;
     }
     .cs-feature-card {
-      background: #fff;
+      background: rgba(17,17,16,0.03);
       border-radius: var(--radius-xl);
       overflow: hidden;
-      border: 1px solid rgba(17,17,16,0.06);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+      border: 1px solid rgba(17,17,16,0.08);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .cs-feature-card:hover {
+      border-color: rgba(91,75,255,0.25);
+      transform: translateY(-2px);
     }
     .cs-feature-card.full-width {
       grid-column: 1 / -1;
     }
     .cs-feature-visual {
-      background: var(--way-light);
+      background: rgba(91,75,255,0.05);
       padding: 32px;
       min-height: 220px;
       display: flex;
@@ -448,16 +466,16 @@
       justify-content: center;
       gap: 16px;
     }
-    .cs-feature-visual.dark-bg { background: var(--way-blue); }
-    .cs-feature-visual.orange-bg { background: #FFF7ED; }
+    .cs-feature-visual.dark-bg { background: var(--bg-card); }
+    .cs-feature-visual.orange-bg { background: rgba(200,242,80,0.06); }
     .cs-feature-body { padding: 24px 28px; }
     .cs-feature-tag {
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--way-blue);
-      background: var(--way-light);
+      color: var(--purple);
+      background: rgba(91,75,255,0.08);
       padding: 4px 10px;
       border-radius: 100px;
       display: inline-block;
@@ -468,6 +486,7 @@
       font-weight: 800;
       letter-spacing: -0.02em;
       margin-bottom: 8px;
+      color: var(--text);
     }
     .cs-feature-desc {
       font-size: 13px;
@@ -479,21 +498,25 @@
     .feat-phone {
       width: 110px;
       height: 200px;
-      background: #fff;
+      background: rgba(17,17,16,0.04);
       border-radius: 18px;
-      border: 1.5px solid rgba(17,17,16,0.08);
+      border: 1.5px solid rgba(17,17,16,0.1);
       overflow: hidden;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
     }
-    .feat-phone.dark { background: var(--way-blue-dk); }
+    .feat-phone.dark {
+      background: var(--bg-card);
+      border-color: rgba(255,255,255,0.06);
+    }
     .feat-phone-head {
       height: 32px;
-      background: var(--way-blue);
+      background: var(--purple);
+      opacity: 0.8;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .feat-phone-head.orange { background: var(--way-orange); }
+    .feat-phone-head.orange { background: var(--green); opacity: 0.7; }
     .feat-phone-notch {
       width: 28px;
       height: 4px;
@@ -501,48 +524,59 @@
       border-radius: 2px;
     }
     .feat-phone-body { padding: 8px 7px; display: flex; flex-direction: column; gap: 5px; }
-    .feat-line { height: 6px; background: #E5E7EB; border-radius: 3px; }
+    .feat-line { height: 6px; background: rgba(17,17,16,0.08); border-radius: 3px; }
     .feat-line.w80 { width: 80%; }
     .feat-line.w60 { width: 60%; }
     .feat-line.w50 { width: 50%; }
-    .feat-line.blue { background: rgba(27,79,216,0.2); }
-    .feat-line.white { background: rgba(255,255,255,0.15); }
-    .feat-block { height: 38px; background: var(--way-light); border-radius: 6px; margin: 2px 0; }
-    .feat-block.dark { background: rgba(255,255,255,0.08); }
+    .feat-line.blue { background: rgba(91,75,255,0.15); }
+    .feat-line.white { background: rgba(255,255,255,0.1); }
+    .feat-block { height: 38px; background: rgba(91,75,255,0.08); border-radius: 6px; margin: 2px 0; border: 1px solid rgba(91,75,255,0.12); }
+    .feat-block.dark { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08); }
     .feat-row { display: flex; gap: 4px; }
-    .feat-pill { flex: 1; height: 12px; background: #E5E7EB; border-radius: 6px; }
-    .feat-pill.blue { background: rgba(27,79,216,0.15); }
+    .feat-pill { flex: 1; height: 12px; background: rgba(17,17,16,0.07); border-radius: 6px; }
+    .feat-pill.blue { background: rgba(91,75,255,0.12); }
     .feat-badge {
       height: 18px;
-      background: var(--way-orange);
+      background: var(--green);
+      opacity: 0.7;
       border-radius: 9px;
       width: 60%;
       margin-top: 4px;
     }
-    .feat-badge.blue { background: var(--way-blue); }
+    .feat-badge.blue { background: var(--purple); opacity: 0.8; }
 
     /* ── Final Showcase ─────────────────────────────── */
     .cs-showcase {
-      background: var(--way-blue-dk);
+      background: var(--bg-dark);
       padding: 96px 0 0;
       overflow: hidden;
+      position: relative;
+    }
+    .cs-showcase::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 60%, rgba(91,75,255,0.07) 0%, transparent 60%);
+      pointer-events: none;
     }
     .cs-showcase-inner {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 32px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
     .cs-showcase-title {
-      font-size: clamp(28px, 4vw, 44px);
+      font-size: clamp(28px, 4vw, 52px);
       font-weight: 900;
       letter-spacing: -0.03em;
-      color: #fff;
+      color: var(--text-light);
       margin-bottom: 12px;
     }
     .cs-showcase-sub {
       font-size: 15px;
-      color: rgba(255,255,255,0.5);
+      color: rgba(238,238,232,0.4);
       margin-bottom: 64px;
     }
     .cs-showcase-phones {
@@ -555,17 +589,18 @@
     .cs-showcase-phone {
       width: 140px;
       height: 260px;
-      background: #fff;
+      background: rgba(255,255,255,0.04);
       border-radius: 24px;
-      border: 2px solid rgba(255,255,255,0.12);
+      border: 1.5px solid rgba(255,255,255,0.09);
       overflow: hidden;
-      box-shadow: 0 32px 80px rgba(0,0,0,0.4);
+      box-shadow: 0 32px 80px rgba(0,0,0,0.5);
       flex-shrink: 0;
     }
     .cs-showcase-phone.tall { height: 300px; }
     .cs-showcase-phone-head {
       height: 40px;
-      background: var(--way-blue);
+      background: var(--purple);
+      opacity: 0.75;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -577,16 +612,16 @@
       border-radius: 3px;
     }
     .cs-showcase-phone-body { padding: 12px 10px; display: flex; flex-direction: column; gap: 7px; }
-    .sp-banner { height: 72px; background: linear-gradient(135deg, var(--way-blue), var(--way-blue-dk)); border-radius: 10px; }
-    .sp-line { height: 7px; background: #E5E7EB; border-radius: 4px; }
+    .sp-banner { height: 72px; background: rgba(91,75,255,0.2); border-radius: 10px; }
+    .sp-line { height: 7px; background: rgba(255,255,255,0.07); border-radius: 4px; }
     .sp-line.w80 { width: 80%; }
     .sp-line.w60 { width: 60%; }
     .sp-line.w40 { width: 40%; }
-    .sp-card { height: 40px; background: #F8FAFF; border-radius: 8px; border: 1px solid #BFDBFE; }
-    .sp-btn { height: 22px; background: var(--way-orange); border-radius: 11px; }
+    .sp-card { height: 40px; background: rgba(91,75,255,0.12); border-radius: 8px; border: 1px solid rgba(91,75,255,0.2); }
+    .sp-btn { height: 22px; background: var(--green); opacity: 0.7; border-radius: 11px; }
     .sp-row { display: flex; gap: 5px; }
-    .sp-pill { flex: 1; height: 14px; background: #E5E7EB; border-radius: 7px; }
-    .sp-pill.blue { background: rgba(27,79,216,0.15); }
+    .sp-pill { flex: 1; height: 14px; background: rgba(255,255,255,0.06); border-radius: 7px; }
+    .sp-pill.blue { background: rgba(91,75,255,0.18); }
 
     /* ── Responsive ─────────────────────────────────── */
     @media (max-width: 960px) {
@@ -620,13 +655,13 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">AC.</a>
+      <a href="index.html" class="nav-logo">NN.</a>
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link">HOME</a></li>
         <li><a href="work.html" class="nav-link active">WORK</a></li>
         <li><a href="resume.html" class="nav-link">RESUME</a></li>
       </ul>
-      <a href="index.html#connect" class="btn-outline">CONTACT US ↗</a>
+      <a href="#connect" class="btn-outline">CONTACT US ↗</a>
     </div>
   </nav>
 
@@ -739,7 +774,7 @@
 
       <!-- Old App Screenshots -->
       <div style="margin-bottom: 16px;">
-        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase;">OLD APP</span>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; color: var(--purple); text-transform: uppercase;">OLD APP</span>
       </div>
       <div class="cs-old-app-grid">
         <div>
@@ -917,26 +952,26 @@
         usability and trust across the entire Way experience.
       </p>
 
-      <div class="cs-solution-grid" style="--bg-card:#fff;">
-        <div class="cs-solution-card" style="background:#fff; border-color:rgba(17,17,16,0.07);">
-          <div class="cs-solution-icon" style="background:var(--way-light);">🧭</div>
-          <div class="cs-solution-name" style="color:var(--text);">Simplified Navigation</div>
-          <div class="cs-solution-desc" style="color:var(--text-muted);">Implemented a bottom nav bar with clear labels — home, explore, claims, and an easy-to-access support — so users always know where they are.</div>
+      <div class="cs-solution-grid">
+        <div class="cs-solution-card">
+          <div class="cs-solution-icon">🧭</div>
+          <div class="cs-solution-name">Simplified Navigation</div>
+          <div class="cs-solution-desc">Implemented a bottom nav bar with clear labels — home, explore, claims, and an easy-to-access support — so users always know where they are.</div>
         </div>
-        <div class="cs-solution-card" style="background:#fff; border-color:rgba(17,17,16,0.07);">
-          <div class="cs-solution-icon" style="background:var(--way-light);">📱</div>
-          <div class="cs-solution-name" style="color:var(--text);">Mobile-First Design</div>
-          <div class="cs-solution-desc" style="color:var(--text-muted);">By focusing on mobile traffic we designed key touch-friendly gestures, hidden mobile menu, and responsive layouts for seamless accessibility.</div>
+        <div class="cs-solution-card">
+          <div class="cs-solution-icon">📱</div>
+          <div class="cs-solution-name">Mobile-First Design</div>
+          <div class="cs-solution-desc">By focusing on mobile traffic we designed key touch-friendly gestures, hidden mobile menu, and responsive layouts for seamless accessibility.</div>
         </div>
-        <div class="cs-solution-card" style="background:#fff; border-color:rgba(17,17,16,0.07);">
-          <div class="cs-solution-icon" style="background:var(--way-light);">👁️</div>
-          <div class="cs-solution-name" style="color:var(--text);">Clear Visual Hierarchy</div>
-          <div class="cs-solution-desc" style="color:var(--text-muted);">The design components create a clear order of importance, visually directing users to the most relevant and actionable content to improve accessibility.</div>
+        <div class="cs-solution-card">
+          <div class="cs-solution-icon">👁️</div>
+          <div class="cs-solution-name">Clear Visual Hierarchy</div>
+          <div class="cs-solution-desc">The design components create a clear order of importance, visually directing users to the most relevant and actionable content to improve accessibility.</div>
         </div>
-        <div class="cs-solution-card" style="background:#fff; border-color:rgba(17,17,16,0.07);">
-          <div class="cs-solution-icon" style="background:var(--way-light);">🏆</div>
-          <div class="cs-solution-name" style="color:var(--text);">Brand-Driven Trust</div>
-          <div class="cs-solution-desc" style="color:var(--text-muted);">Integrated Prudential brand elements to help users feel confident and familiar with the platform, connecting to a trusted brand name and experience.</div>
+        <div class="cs-solution-card">
+          <div class="cs-solution-icon">🏆</div>
+          <div class="cs-solution-name">Brand-Driven Trust</div>
+          <div class="cs-solution-desc">Integrated Prudential brand elements to help users feel confident and familiar with the platform, connecting to a trusted brand name and experience.</div>
         </div>
       </div>
     </div>
@@ -1039,13 +1074,13 @@
               <div class="feat-phone-body">
                 <div class="feat-line w80"></div>
                 <div class="feat-line w60"></div>
-                <div class="feat-block" style="background:#FFE4CC;"></div>
-                <div class="feat-badge" style="background:var(--way-orange);"></div>
+                <div class="feat-block"></div>
+                <div class="feat-badge"></div>
               </div>
             </div>
           </div>
           <div class="cs-feature-body">
-            <span class="cs-feature-tag" style="color: #C2410C; background:#FFF7ED;">USP</span>
+            <span class="cs-feature-tag">USP</span>
             <h3 class="cs-feature-title">Product USP</h3>
             <p class="cs-feature-desc">Highlighting the primary product USP in the onboarding steps allows users to understand the main benefit of the product clearly during the flow.</p>
           </div>
@@ -1053,18 +1088,18 @@
 
         <!-- Premium Steps + Policy Card side by side -->
         <div class="cs-feature-card">
-          <div class="cs-feature-visual" style="background:#F0F4FF; gap: 20px;">
+          <div class="cs-feature-visual" style="gap: 20px;">
             <div class="feat-phone">
               <div class="feat-phone-head"><div class="feat-phone-notch"></div></div>
               <div class="feat-phone-body">
                 <div class="feat-line w60 blue"></div>
                 <div class="feat-block"></div>
                 <div style="display:flex;gap:4px;margin:2px 0;">
-                  <div style="width:8px;height:8px;border-radius:50%;background:var(--way-blue);flex-shrink:0;margin-top:3px;"></div>
+                  <div style="width:8px;height:8px;border-radius:50%;background:var(--purple);flex-shrink:0;margin-top:3px;opacity:0.8;"></div>
                   <div class="feat-line w80 blue" style="height:8px;"></div>
                 </div>
                 <div style="display:flex;gap:4px;margin:2px 0;">
-                  <div style="width:8px;height:8px;border-radius:50%;background:#E5E7EB;flex-shrink:0;margin-top:3px;"></div>
+                  <div style="width:8px;height:8px;border-radius:50%;background:rgba(17,17,16,0.1);flex-shrink:0;margin-top:3px;"></div>
                   <div class="feat-line w60" style="height:8px;"></div>
                 </div>
                 <div class="feat-badge blue"></div>
@@ -1075,7 +1110,7 @@
               <div class="feat-phone-body">
                 <div class="feat-line w80 blue"></div>
                 <div class="feat-line w60"></div>
-                <div class="feat-block" style="background:#EEF2FF;border:1px solid #C7D2FE;"></div>
+                <div class="feat-block"></div>
                 <div class="feat-row">
                   <div class="feat-pill blue"></div>
                   <div class="feat-pill"></div>
@@ -1097,8 +1132,9 @@
 
   <!-- ── FINAL SHOWCASE ─────────────────────────────── -->
   <section class="cs-showcase">
+    <span class="asterisk" style="position:absolute;top:48px;right:80px;opacity:0.15;font-size:28px;z-index:1;">✦</span>
     <div class="cs-showcase-inner">
-      <p class="cs-section-eyebrow" style="color:rgba(255,255,255,0.4);">06 — OUTCOME</p>
+      <p class="cs-section-eyebrow light">06 — OUTCOME</p>
       <h2 class="cs-showcase-title">The final experience</h2>
       <p class="cs-showcase-sub">A modern, trust-driven insurance app built for Indonesia's digital-first generation.</p>
 
@@ -1176,14 +1212,14 @@
           FIND YOUR OWN <span class="connect-accent">AUDIENCE.</span>
         </h2>
         <div class="connect-actions">
-          <a href="mailto:hello@alexchen.design" class="btn-primary-light">SAY HELLO ↗</a>
+          <a href="mailto:Khannameera95@gmail.com" class="btn-primary-light">SAY HELLO ↗</a>
           <a href="work.html" class="btn-ghost-light">VIEW ALL WORK</a>
         </div>
       </div>
       <span class="asterisk connect-asterisk-right">✦</span>
     </div>
     <div class="connect-footer">
-      <span class="footer-name">Alex Chen · Product Designer</span>
+      <span class="footer-name">Nameera Nazz · Senior Product Designer</span>
       <span class="footer-copy">© 2024 — All rights reserved</span>
     </div>
   </section>
