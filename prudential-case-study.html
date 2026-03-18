@@ -29,6 +29,26 @@
       margin: 0 auto;
       padding: 0 48px;
       position: relative;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+    .cs-hero-text {
+      flex: 1;
+      min-width: 0;
+    }
+    .cs-hero-image {
+      flex: 0 0 auto;
+      width: 480px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .cs-hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 32px 64px rgba(0,0,0,0.18));
     }
     .cs-back {
       display: inline-flex;
@@ -637,8 +657,13 @@
       .cs-meta-bar { flex-wrap: wrap; gap: 24px; }
       .cs-meta-divider { display: none; }
     }
+    @media (max-width: 900px) {
+      .cs-hero-inner { flex-direction: column; gap: 32px; }
+      .cs-hero-image { width: 100%; max-width: 420px; align-self: center; }
+    }
     @media (max-width: 640px) {
       .cs-hero-inner { padding: 0 20px 0; }
+      .cs-hero-image { max-width: 320px; }
       .cs-inner { padding: 0 20px; }
       .cs-hero-phones { padding: 32px 20px 0; margin: 0 -20px; }
       .cs-phone { width: 80px; height: 150px; }
@@ -669,35 +694,41 @@
   <section class="cs-hero">
     <span class="cs-hero-asterisk">✦</span>
     <div class="cs-hero-inner">
-      <a href="work.html" class="cs-back">← BACK TO WORK</a>
-      <p class="cs-eyebrow">MOBILE APP · 2024</p>
-      <h1 class="cs-title">Prudential × Way —<br />Simplifying Insurance<br />for the Digital Age</h1>
-      <p class="cs-subtitle">
-        Way is a joint venture between Prudential and FWD Mega Life Insurance, focused
-        on transforming the insurance experience in Indonesia — making it modern,
-        intuitive, and accessible to all.
-      </p>
+      <div class="cs-hero-text">
+        <a href="work.html" class="cs-back">← BACK TO WORK</a>
+        <p class="cs-eyebrow">MOBILE APP · 2024</p>
+        <h1 class="cs-title">Prudential × Way —<br />Simplifying Insurance<br />for the Digital Age</h1>
+        <p class="cs-subtitle">
+          Way is a joint venture between Prudential and FWD Mega Life Insurance, focused
+          on transforming the insurance experience in Indonesia — making it modern,
+          intuitive, and accessible to all.
+        </p>
 
-      <div class="cs-meta-bar">
-        <div class="cs-meta-item">
-          <span class="cs-meta-label">Role</span>
-          <span class="cs-meta-value">Senior Designer</span>
+        <div class="cs-meta-bar">
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Role</span>
+            <span class="cs-meta-value">Senior Designer</span>
+          </div>
+          <div class="cs-meta-divider"></div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Responsibility</span>
+            <span class="cs-meta-value">End-to-End UX &amp; UI</span>
+          </div>
+          <div class="cs-meta-divider"></div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Team</span>
+            <span class="cs-meta-value">3 People</span>
+          </div>
+          <div class="cs-meta-divider"></div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Timeline</span>
+            <span class="cs-meta-value">4 Months</span>
+          </div>
         </div>
-        <div class="cs-meta-divider"></div>
-        <div class="cs-meta-item">
-          <span class="cs-meta-label">Responsibility</span>
-          <span class="cs-meta-value">End-to-End UX &amp; UI</span>
-        </div>
-        <div class="cs-meta-divider"></div>
-        <div class="cs-meta-item">
-          <span class="cs-meta-label">Team</span>
-          <span class="cs-meta-value">3 People</span>
-        </div>
-        <div class="cs-meta-divider"></div>
-        <div class="cs-meta-item">
-          <span class="cs-meta-label">Timeline</span>
-          <span class="cs-meta-value">4 Months</span>
-        </div>
+      </div>
+
+      <div class="cs-hero-image">
+        <img src="Prudential mockup.png" alt="Way app mockup showing home and product screens" />
       </div>
     </div>
 
