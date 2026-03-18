@@ -3,7 +3,7 @@ name: Deploy Portfolio to GitHub Pages
 on:
   push:
     branches:
-      - claude/portfolio-website-setup-0EHBW
+      - claude/portfolio-website-setup-MWLSr
 
 permissions:
   contents: read
